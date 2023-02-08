@@ -1,9 +1,14 @@
-import css from './styles.css';
 import React from 'react'
+import css from "./styles.css"
 
 const Dashboard = () => {
-    console.log(css)
-    return <h2 className={css.test}>Login here douchebag</h2>
-  }
+    return (
+        <div className={css.wrapper}>
+            <div >
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    )
+}
 
 export default Dashboard

@@ -4,3 +4,7 @@
     background-color: #65BABF;
     padding-left: 20rem;
 }
+
+.wrapper h1 {
+    display: inline;
+}

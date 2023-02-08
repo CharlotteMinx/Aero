@@ -1,8 +1,10 @@
-.test {
-    background-color: red;
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #BF65BA;
+    padding-left: 20rem;
 }
 
-.abcd {
-    margin-top: 50px !important;
-    color: red !important;
+.wrapper h1 {
+    display: inline;
 }

@@ -5,7 +5,7 @@ const Profile = () => {
     return (
         <div className={css.wrapper}>
             <div className={css.profile__card}>
-                <h1></h1>
+                <h1>Profile</h1>
             </div>
         </div>
     )
