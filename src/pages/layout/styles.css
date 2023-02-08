@@ -1,0 +1,15 @@
+.wrapper__content {
+    padding-left: '12rem';
+    background-color: "red";
+    width: "100vw";
+    height: "100vh";
+}
+
+.wrapper__content {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.wrapper {
+    font-family: 'Open Sans', sans-serif;
+}

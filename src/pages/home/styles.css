@@ -1,0 +1,116 @@
+.wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: #65BABF;
+}
+.wrapper > div {
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.wrapper h2 {
+    font-size: 3rem;
+}
+.wrapper__profile {
+    background-color: #65BABF;
+    display: flex;
+    position: relative;
+}
+
+.wrapper__dashboard {
+    background-color: #BF65BA;
+    display: flex;
+}
+
+.wrapper > span {
+    position: absolute;
+    top: calc(50% - 5rem);
+}
+
+.wrapper__dashboard .card::after {
+    width: 0; 
+    height: 0; 
+    border-top: 7rem solid transparent;
+    border-bottom: 7rem solid transparent;
+    left: -1rem;
+    border-left: 7rem solid #333;
+    display: block;
+    content: "";
+    position: absolute;
+    top: calc(50% - 7rem);
+    transition: all 0.4s;
+  }
+
+.wrapper__dashboard:hover .card{
+    transform: scale(120%);
+}
+
+.wrapper__profile:hover .card {
+    transform: scale(120%);
+}
+  
+.wrapper__profile .card::after {
+    width: 0; 
+    height: 0; 
+    border-top: 7rem solid transparent;
+    border-bottom: 7rem solid transparent; 
+    right: -1rem;
+    border-right: 7rem solid #333; 
+    display: block;
+    content: "";
+    position: absolute;
+    top: calc(50% - 7rem);
+    transition: all 0.4s;
+    
+}
+
+.wrapper__profile::after {
+    position: absolute;
+    top: -10rem;
+    bottom: -10rem;
+    right: -2rem;    
+    width: 10rem;
+    background-color: #BF65BA;
+    display: block;
+    content: "";
+    transform: rotate(1.2deg);
+    box-shadow: -0.5rem -0.5rem 0.5rem #555;
+}
+
+.wrapper span {
+    color: black;
+    font-size: 20rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    background-color: white;
+    width: 30vw;
+    max-width: 30rem;
+    transition: transform 0.4s;
+    color: black;
+    border-radius: 5%;
+    box-shadow: 0.4rem 0.4rem 1rem #999;
+    padding: 2rem;
+    position: relative;
+}
+.card p {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+.wrapper a {
+    text-decoration: none;
+}

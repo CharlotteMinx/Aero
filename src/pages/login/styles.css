@@ -1,0 +1,110 @@
+.wrapper {
+    display: flex;
+    height: 100%;
+    padding-left: 20rem;
+    background: #65BABF;
+}
+.wrapper > div {
+    height: 100%;
+    flex: 1 1 0px;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper__image {
+    position: relative;
+}
+.image {
+    background-image: url("https://i.imgur.com/Mbz78DH.png");
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: 20% 50%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.wrapper__image::before {
+    position: absolute;
+    top: -10rem;
+    bottom: -10rem;
+    left: 0;
+    right: -3rem;
+    background-color: #65BABF;
+    display: block;
+    content: "";
+    transform: rotate(2deg);
+    box-shadow: 0.2rem 0.2rem 0.2rem #41797c;
+}
+
+
+.wrapper form {
+    align-items: center;
+    max-width: 28rem;
+    margin: auto;
+}
+
+.wrapper__form {
+    padding: 5rem;
+    text-align: center;
+    padding-top: 30vh;
+    background-color: #BF65BA;
+}
+
+.wrapper__input {
+    border: none;
+	background: none;
+	padding: 10px;
+	padding-left: 1.6rem;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #6A679E;
+}
+
+.login__input {
+    border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 0.8rem;
+	padding-left: 1.5rem;
+	font-weight: 700;
+	width: 100%;
+	transition: .2s;
+    margin-left: 0.5rem;
+    color: white;
+}
+
+.login__input::placeholder {
+    color: #D4D3E8;
+}
+
+.login__submit {
+    background: #fff;
+	font-size: 1rem;
+	margin-top: 3.5rem;
+	padding: 1rem 1.2rem;
+	border-radius: 2rem;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	align-items: center;
+	width: 60%;
+	color: #4C489D;
+	box-shadow: 0px 2px 2px #5C5696;
+	cursor: pointer;
+	transition: .2s;
+    text-align: center;
+}
+
+.login__icon {
+    color: white;
+    font-size: 2rem;
+}
