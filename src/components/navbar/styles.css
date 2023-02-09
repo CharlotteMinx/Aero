@@ -26,7 +26,7 @@
     display: block;
     content: "";
     transform: rotate(-1.2deg);
-    box-shadow: 0.5rem 0.5rem 0.5rem #555;
+    box-shadow: var(--box-shadow-cool);
 }
 
 .navbar > li {
@@ -64,19 +64,23 @@
     filter: grayscale(100%) opacity(0.7);
     transition: all 2s;
 }
+
 .navbar a:hover {
     filter: grayscale(0%) opacity(1);
     color: #fff;
 }
+
 .navbar:hover {
     width: 12rem;
 }
+
 .navbar:hover .navbar__link {
     -webkit-animation: fadeIn 1.4s ease-out;
     animation: fadeIn 1.4s ease-out;
     display: inline;
 }
+
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
-  }
+}

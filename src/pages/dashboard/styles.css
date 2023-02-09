@@ -3,9 +3,9 @@
 .wrapper {
     width: calc(100% - 23rem);
     height: 100vh;
-    background-color: #BF65BA;
+    background-color: var(--main-lilac);
     padding: 3rem;
-    padding-left: 20rem;
+    padding-left: var(--wrapper-padding-left);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

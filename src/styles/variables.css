@@ -1,3 +1,64 @@
 :root {
     --main-blue: #65BABF;
+    --main-lilac: #BF65BA;
+    --wrapper-padding-left: 20rem;
+    --box-shadow-cool: 0.5rem 0.5rem 0.5rem #555;
+}
+
+h1 {
+    font-size: 3rem
+}
+
+:global(.button__login) {
+    background: #fff;
+	font-size: 1rem;
+	margin-top: 3.5rem;
+	padding: 1rem 1.2rem;
+	border-radius: 2rem;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	align-items: center;
+	width: 60%;
+	color: #4C489D;
+	box-shadow: 0px 2px 2px #5C5696;
+	cursor: pointer;
+	transition: .2s;
+    text-align: center;
+}
+
+:global(.wrapper__input) {
+    border: none;
+	background: none;
+	padding: 10px;
+	padding-left: 1.6rem;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+:global(.login__input) {
+    border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 0.8rem;
+	padding-left: 1.5rem;
+	font-weight: 700;
+	width: 100%;
+	transition: .2s;
+    margin-left: 0.5rem;
+    color: white;
+}
+:global(.login__input:active),
+:global(.login__input:focus),
+:global(.login__input:hover) {
+	outline: none;
+	border-bottom-color: #6A679E;
+}
+
+:global(.login__input::placeholder) {
+    color: #D4D3E8;
 }

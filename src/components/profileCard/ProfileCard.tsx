@@ -11,7 +11,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ profile }) => {
   const authContext = useAuth()
   const random = Math.floor(Math.random() * 19) + 1
   const articleText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quas sint nisi animi voluptatum blanditiis explicabo recusandae maiores esse mollitia, fugit quam quia! Aliquid numquam eaque natus voluptates repudiandae molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla impedit quis animi! Assumenda, et laudantium illo eius magni quisquam soluta possimus sequi, voluptate dolor omnis delectus esse quaerat, adipisci velit.'
-  const logs: any[] = new Array(random).fill(<p>{`${new Date().toDateString()}: ${articleText}`}</p>)
+  const logs: any[] = Array.from({ length: random }, (_, i) => <p key={i}>{`${new Date().toDateString()}: ${articleText}`}</p>)
 
   return (
           <div className={css.wrapper}>

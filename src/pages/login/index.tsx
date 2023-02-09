@@ -31,15 +31,15 @@ const Login: React.FC = () => {
             <div className={css.wrapper__form} >
                 <h1>Welcome back Traveler!</h1>
                 <form onSubmit={submitHandler}>
-                    <div className={css.wrapper__input}>
+                    <div className={'wrapper__input'}>
                         <span className={'material-symbols-outlined'}>person</span>
-                        <input className={css.login__input} placeholder={'username'} type="text" name="username" onChange={changeHandler} value={username} />
+                        <input className={'login__input'} placeholder={'username'} type="text" name="username" onChange={changeHandler} value={username} />
                     </div>
-                    <div className={css.wrapper__input}>
+                    <div className={'wrapper__input'}>
                         <span className={'material-symbols-outlined'}>key</span>
-                        <input className={css.login__input} placeholder={'password'} type="password" name="password" onChange={changeHandler} value={password} />
+                        <input className={'login__input'} placeholder={'password'} type="password" name="password" onChange={changeHandler} value={password} />
                     </div>
-                    <input className={css.login__submit} type="submit" name="submit" />
+                    <input className={'button__login'} type="submit" name="submit" />
                     <NavLink to="/signup">
                         <span className={css.link__signup}>{"Don't have an account yet?"}</span>
                     </NavLink>

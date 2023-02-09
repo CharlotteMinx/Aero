@@ -32,19 +32,19 @@ const Login: React.FC = () => {
             <div className={css.wrapper__form} >
                 <h1>Sign up for free.</h1>
                 <form onSubmit={submitHandler}>
-                    <div className={css.wrapper__input}>
+                    <div className={'wrapper__input'}>
                         <span className={'material-symbols-outlined'}>person</span>
-                        <input className={css.login__input} placeholder={'username'} type="text" name="username" onChange={changeHandler} value={username} />
+                        <input className={'login__input'} placeholder={'username'} type="text" name="username" onChange={changeHandler} value={username} />
                     </div>
-                    <div className={css.wrapper__input}>
+                    <div className={'wrapper__input'}>
                         <span className={'material-symbols-outlined'}>key</span>
-                        <input className={css.login__input} placeholder={'password'} type="password" name="password" onChange={changeHandler} value={password} />
+                        <input className={'login__input'} placeholder={'password'} type="password" name="password" onChange={changeHandler} value={password} />
                     </div>
-                    <div className={css.wrapper__input}>
+                    <div className={'wrapper__input'}>
                         <span className="material-symbols-outlined">mail</span>
-                        <input className={css.login__input} placeholder={'funnydog@gmail.com'} type="email" name="email" onChange={changeHandler} value={email} />
+                        <input className={'login__input'} placeholder={'funnydog@gmail.com'} type="email" name="email" onChange={changeHandler} value={email} />
                     </div>
-                    <input className={css.login__submit} type="submit" name="submit" value={'Sign up!'} />
+                    <input className={'button__login'} type="submit" name="submit" value={'Sign up!'} />
                     <NavLink to="/login">
                         <span className={css.link__signup}>{'Already a member?'}</span>
                     </NavLink>

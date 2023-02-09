@@ -29,7 +29,7 @@
 }
 
 .wrapper__dashboard {
-    background-color: #BF65BA;
+    background-color: var(--main-lilac);
     display: flex;
 }
 
@@ -81,16 +81,16 @@
     bottom: -10rem;
     right: -2rem;    
     width: 10rem;
-    background-color: #BF65BA;
+    background-color: var(--main-lilac);
     display: block;
     content: "";
     transform: rotate(1.2deg);
-    box-shadow: -0.5rem -0.5rem 0.5rem #555;
+    box-shadow: var(--box-shadow-cool)
 }
 
 .wrapper span {
     color: black;
-    font-size: 20rem;
+    font-size: var(--wrapper-padding-left);
 }
 
 .card {
@@ -104,7 +104,7 @@
     transition: transform 0.4s;
     color: black;
     border-radius: .5rem;
-    box-shadow: 0.4rem 0.4rem 1rem #999;
+    box-shadow: var(--box-shadow-cool);
     padding: 2rem;
     position: relative;
 }

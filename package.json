@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack serve --config ./webpack.config.js --mode development --port 3000",
     "dev-watch": "webpack --watch --config ./webpack.config.js --mode development",
-    "start": "node index.js",
+    "start": "webpack --config ./webpack.config.js --mode development && node index.js",
     "lint": "eslint --fix --ext .ts,.tsx ./src"
   },
   "keywords": [],
