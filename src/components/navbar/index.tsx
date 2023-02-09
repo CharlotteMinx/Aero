@@ -7,9 +7,9 @@ const Navbar: React.FC = () => {
   const authContext = useAuth()
   return (
         <>
-            {!((authContext?.userId) == null) && <nav className={css.navbar}>
+            {!((authContext?.userName) == null) && <nav className={css.navbar}>
                 <li>
-                    <NavLink to={`/profile/${'david'}`}>
+                    <NavLink to={`/profile/${authContext.userName}`}>
                         <span className={`material-symbols-outlined ${css.navbar__icon}`}>account_circle</span>
                         <span className={css.navbar__link}>Profile</span>
                     </NavLink>

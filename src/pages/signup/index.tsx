@@ -7,7 +7,8 @@ const Login: React.FC = () => {
   const auth = useAuth()
   const [data, setData] = useState({
     username: '',
-    password: ''
+    password: '',
+    email: ''
   })
 
   const changeHandler = (event: ChangeEvent<HTMLInputElement>): void => {
@@ -17,11 +18,11 @@ const Login: React.FC = () => {
 
   const submitHandler = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault()
-    // call API to authenticate, save token to session
+    // call API to try to perform signup and login
     auth?.login(username, password)
   }
 
-  const { username, password } = data
+  const { username, password, email } = data
 
   return (
         <div className={css.wrapper}>
@@ -29,7 +30,7 @@ const Login: React.FC = () => {
                 <div className={css.image}> </div>
             </div>
             <div className={css.wrapper__form} >
-                <h1>Welcome back Traveler!</h1>
+                <h1>Sign up for free.</h1>
                 <form onSubmit={submitHandler}>
                     <div className={css.wrapper__input}>
                         <span className={'material-symbols-outlined'}>person</span>
@@ -39,9 +40,13 @@ const Login: React.FC = () => {
                         <span className={'material-symbols-outlined'}>key</span>
                         <input className={css.login__input} placeholder={'password'} type="password" name="password" onChange={changeHandler} value={password} />
                     </div>
-                    <input className={css.login__submit} type="submit" name="submit" />
-                    <NavLink to="/signup">
-                        <span className={css.link__signup}>{"Don't have an account yet?"}</span>
+                    <div className={css.wrapper__input}>
+                        <span className="material-symbols-outlined">mail</span>
+                        <input className={css.login__input} placeholder={'funnydog@gmail.com'} type="email" name="email" onChange={changeHandler} value={email} />
+                    </div>
+                    <input className={css.login__submit} type="submit" name="submit" value={'Sign up!'} />
+                    <NavLink to="/login">
+                        <span className={css.link__signup}>{'Already a member?'}</span>
                     </NavLink>
                 </form>
             </div>

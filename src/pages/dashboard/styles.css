@@ -1,8 +1,16 @@
+@import './../../styles/variables.css';
+
 .wrapper {
-    width: 100vw;
+    width: calc(100% - 23rem);
     height: 100vh;
     background-color: #BF65BA;
+    padding: 3rem;
     padding-left: 20rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    align-content: baseline;
 }
 
 .wrapper h1 {

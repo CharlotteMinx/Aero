@@ -1,0 +1,66 @@
+@import './../../styles/variables.css';
+.wrapper {
+    padding-left: 20rem;
+    width:  100%;
+    height: 100%;
+    background-color: var(--main-blue);
+    display: inline-block;
+}
+
+.wrapper__card {
+    margin-top: 4rem;
+    margin-left: 1rem;
+    width: calc(100% - 36rem);
+    background-color: white;
+    display: inline-block;
+    box-shadow: 1rem 1rem 1rem #555;
+    padding: 3rem;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-basis: 0;
+}
+
+.wrapper__card img{
+    border-radius: 50%;
+    width: 20rem;
+}
+.wrapper__card h1 {
+    font-size: 3rem;
+}
+
+.wrapper__card ul{
+    padding: 0;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    display: inline-block;
+
+}
+
+.wrapper__profile {
+    flex: 2;
+}
+
+.wrapper__log {
+    flex: 5;
+}
+
+.wrapper__logs {
+    overflow-y: auto;
+    max-height: 50vh;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+.wrapper__thumbnail {
+    margin-bottom: 3rem;
+}
+.wrapper__logs p {
+    border: 1px solid #aaa;
+    padding: 1rem;
+    border-radius: .5rem;
+
+}
+.wrapper__logs p:nth-child(odd) {
+    background-color: #f5f5f5;
+}

@@ -1,3 +1,4 @@
+@import './../../styles/variables.css';
 .wrapper__content {
     padding-left: '12rem';
     background-color: "red";

@@ -1,3 +1,4 @@
+@import './../../styles/variables.css';
 .wrapper {
     display: flex;
     height: 100vh;
@@ -6,7 +7,7 @@
     justify-content: space-around;
     align-content: center;
     flex-wrap: wrap;
-    background-color: #65BABF;
+    background-color: var(--main-blue);
 }
 .wrapper > div {
     flex-grow: 1;
@@ -22,7 +23,7 @@
     font-size: 3rem;
 }
 .wrapper__profile {
-    background-color: #65BABF;
+    background-color: var(--main-blue);
     display: flex;
     position: relative;
 }
@@ -102,7 +103,7 @@
     max-width: 30rem;
     transition: transform 0.4s;
     color: black;
-    border-radius: 5%;
+    border-radius: .5rem;
     box-shadow: 0.4rem 0.4rem 1rem #999;
     padding: 2rem;
     position: relative;

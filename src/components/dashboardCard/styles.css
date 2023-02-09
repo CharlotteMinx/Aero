@@ -1,0 +1,35 @@
+@import './../../styles/variables.css';
+.wrapper__card {
+    display: inline-flex;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    padding: 2rem;
+    margin: 1rem;
+    min-width: 25rem;
+    height: 30rem;
+    border-radius: .5rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem #555;
+}
+.wrapper__thumbnail {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+.wrapper__card img {
+    border-radius: 50%;
+    width: 10rem;
+    align-self: center;
+}
+.wrapper__card h1 {
+    position: relative;
+    font-size: 2rem;
+}
+.wrapper__card span {
+    color: green;
+    position: relative;
+    top: .5rem;
+    margin-left: .5rem;
+    
+}
