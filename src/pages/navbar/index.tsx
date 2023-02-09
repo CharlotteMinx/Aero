@@ -1,13 +1,13 @@
 import React from 'react'
 import css from './styles.css'
-import { NavLink } from "react-router-dom"
+import { NavLink } from 'react-router-dom'
 import { useAuth } from '../../hooks/useAuth'
 
-const Navbar = () => {
-    const {userId, logout} = useAuth()
-    return(
+const Navbar: React.FC = () => {
+  const authContext = useAuth()
+  return (
         <>
-            {!!userId && <nav className={css.navbar}>
+            {!((authContext?.userId) == null) && <nav className={css.navbar}>
                 <li>
                     <NavLink to={`/profile/${'david'}`}>
                         <span className={`material-symbols-outlined ${css.navbar__icon}`}>account_circle</span>
@@ -21,14 +21,14 @@ const Navbar = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/login" onClick={logout}>
+                    <NavLink to="/login" onClick={authContext.logout}>
                         <span className={`material-symbols-outlined ${css.navbar__icon}`}>meeting_room</span>
                         <span className={css.navbar__link}>Logout</span>
                     </NavLink>
                 </li>
             </nav>}
         </>
-    )
+  )
 }
 
 export default Navbar

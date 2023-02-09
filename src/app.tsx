@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { BrowserRouter, Routes, Route, Outlet, NavLink } from 'react-router-dom'
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Dashboard from './pages/dashboard'
 import Layout from './pages/layout'
 import Profile from './pages/profile'
@@ -7,7 +7,7 @@ import Home from './pages/home'
 import Login from './pages/login'
 import { ProtectedRoute } from './components/ProtectedRoute'
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>

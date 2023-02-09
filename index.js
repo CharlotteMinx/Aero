@@ -4,7 +4,7 @@ const path = require('path')
 const port = process.env.PORT || 5000
 
 // This displays message that the server running and listening to specified port
-app.listen(port, () => console.log(`Listening on port ${port}`));
+app.listen(port, () => console.log(`Listening on port ${port}`))
 
 app.use(express.static('dist'))
 

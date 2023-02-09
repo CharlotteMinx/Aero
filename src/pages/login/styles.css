@@ -104,7 +104,7 @@
     text-align: center;
 }
 
-.login__icon {
+.wrapper__input span {
     color: white;
     font-size: 2rem;
 }

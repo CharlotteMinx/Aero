@@ -1,11 +1,11 @@
-import { Outlet } from "react-router-dom"
+import { Outlet } from 'react-router-dom'
 import React from 'react'
-import css from './styles.css';
-import Navbar from "../navbar";
-import { AuthProvider } from "../../hooks/useAuth";
+import css from './styles.css'
+import Navbar from '../navbar'
+import { AuthProvider } from '../../hooks/useAuth'
 
-const Layout = () => {
-    return (
+const Layout: React.FC = () => {
+  return (
         <AuthProvider>
             <div className={css.wrapper}>
                 <Navbar />
@@ -14,7 +14,7 @@ const Layout = () => {
                 </main>
             </div>
         </AuthProvider>
-    )
+  )
 }
 
 export default Layout

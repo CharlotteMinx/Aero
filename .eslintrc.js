@@ -10,7 +10,12 @@ module.exports = {
   ignorePatterns: ['./dist/**', 'webpack.config.js'],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
+    project: ['./tsconfig.json']
+  },
+  rules: {
+    '@typescript-eslint/strict-boolean-expressions': 'warn',
+    '@typescript-eslint/restrict-template-expressions': 'warn'
   },
   plugins: [
     'react'

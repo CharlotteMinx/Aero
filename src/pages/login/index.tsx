@@ -1,27 +1,28 @@
-import React, { useState } from 'react';
-import css from './styles.css';
-import { useAuth } from '../../hooks/useAuth';
+import React, { type ChangeEvent, useState } from 'react'
+import css from './styles.css'
+import { useAuth } from '../../hooks/useAuth'
 
-const Login = () => {
-    const { login } = useAuth();
-    const [data,setData] = useState({
-        username: "",
-        password: ""
-    });
+const Login: React.FC = () => {
+  const auth = useAuth()
+  const [data, setData] = useState({
+    username: '',
+    password: ''
+  })
 
-    const changeHandler = e => {
-        setData({...data,[e.target.name]:e.target.value}); 
-    }
+  const changeHandler = (event: ChangeEvent<HTMLInputElement>): void => {
+    const target = event.target as HTMLInputElement
+    setData({ ...data, [target.name]: target.value })
+  }
 
-    const submitHandler = e => { 
-        e.preventDefault()
-        //call API to authenticate, save token to session
-        login("client_id123")
-    }
+  const submitHandler = (event: React.FormEvent<HTMLFormElement>): void => {
+    event.preventDefault()
+    // call API to authenticate, save token to session
+    auth?.login(username, password)
+  }
 
-    const {username,password} = data;
+  const { username, password } = data
 
-    return (
+  return (
         <div className={css.wrapper}>
             <div className={css.wrapper__image}>
                 <div className={css.image}> </div>
@@ -30,19 +31,18 @@ const Login = () => {
                 <h1>Welcome back Traveler!</h1>
                 <form onSubmit={submitHandler}>
                     <div className={css.wrapper__input}>
-                        <span class={`material-symbols-outlined ${css.login__icon}`}>person</span>
-                        <input className={css.login__input} placeholder={"username"} type="text" name="username" onChange={changeHandler} value={username} />
+                        <span className={'material-symbols-outlined'}>person</span>
+                        <input className={css.login__input} placeholder={'username'} type="text" name="username" onChange={changeHandler} value={username} />
                     </div>
                     <div className={css.wrapper__input}>
-                        <span class={`material-symbols-outlined ${css.login__icon}`}>key</span>
-                        <input className={css.login__input}  placeholder={"password"} type="password" name="password" onChange={changeHandler} value={password} />
+                        <span className={'material-symbols-outlined'}>key</span>
+                        <input className={css.login__input} placeholder={'password'} type="password" name="password" onChange={changeHandler} value={password} />
                     </div>
                     <input className={css.login__submit} type="submit" name="submit" />
                 </form>
             </div>
         </div>
-    )
-};
+  )
+}
 
-const b = "a";
-export default Login;
+export default Login
