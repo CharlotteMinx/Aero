@@ -9,7 +9,7 @@ export const ProtectedRoute = ({ children }: ProptectedRouteProps): JSX.Element 
   const authContext = useAuth()
   if ((authContext != null) && !authContext?.userName) {
     // user is not authenticated
-    return <Navigate to="/" />
+    return <Navigate to="/login" />
   }
   return <>{children}</>
 }
